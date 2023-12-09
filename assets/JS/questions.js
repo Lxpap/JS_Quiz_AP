@@ -1,6 +1,6 @@
 var questions = [
     {
-        question: "JavaScript is an __________ language.",
+        question: "JavaScript is a(n) __________ language.",
         choices: ["Object-Oriented", "Object-Based", "Procedural", "Markdown"],
         correct: 0
     },
