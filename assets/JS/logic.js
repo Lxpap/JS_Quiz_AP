@@ -27,11 +27,11 @@ startBtn.addEventListener("click", onStart);
 // Function to Start the App
 
 function onStart() {
-    
+
     startScreen.setAttribute("class", "hide");
 
     var countDown = setInterval(() => {
-       
+
         if (timeLeft < 1) {
             clearInterval(countDown);
             questionsContainer.setAttribute("class", "hide");
@@ -104,7 +104,7 @@ function onAnswer(event) {
 
     questionTitle.textContent = "";
     choicesContainer.innerHTML = "";
-    currentQuestion ++;
+    currentQuestion++;
 
     if (questions[currentQuestion]) {
         bringQuestion(questions[currentQuestion]);
@@ -114,4 +114,22 @@ function onAnswer(event) {
         endScreen.setAttribute("class", "show");
     }
 }
+
+// Score submission Function
+
+submitBtn.addEventListener("click", onSubmit);
+
+function onSubmit() {
+
+
+    var highscores = JSON.parse(window.localStorage.getItem("highscores")) || [];
+
+    highscores.push({ initials: initials.value, score: score });
+
+    window.localStorage.setItem("highscores", JSON.stringify(highscores));
+
+    window.location.assign("https://lxpap.github.io/JS_Quiz_AP/highscores.html")
+
+}
+
 
