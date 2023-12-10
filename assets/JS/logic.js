@@ -131,5 +131,3 @@ function onSubmit() {
     window.location.assign("https://lxpap.github.io/JS_Quiz_AP/highscores.html")
 
 }
-
-

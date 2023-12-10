@@ -1,6 +1,8 @@
 var highscoresList = document.getElementById("highscores");
 var clearScores = document.getElementById("clear");
 
+// Function to add, display and clear high scores
+
 function highScores() {
 
     var highscores = JSON.parse(localStorage.getItem("highscores")) || [];
