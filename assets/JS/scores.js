@@ -1,10 +1,7 @@
 var highscoresList = document.getElementById("highscores");
 var clearScores = document.getElementById("clear");
 
-
-
 function highScores() {
-
 
     var highscores = JSON.parse(localStorage.getItem("highscores")) || [];
 
@@ -18,11 +15,11 @@ function highScores() {
         var scoreEntry = highscores[i];
         var listItem = document.createElement("li");
         listItem.textContent = scoreEntry.initials + ": " + scoreEntry.score;
-        highScoresList.appendChild(listItem);
+        highscoresList.appendChild(listItem);
     }
 
     clearScores.addEventListener("click", function () {
-        highScoresList.innerHTML = "";
+        highscoresList.innerHTML = "";
         localStorage.removeItem("highscores");
     })
 
